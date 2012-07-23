@@ -1,13 +1,15 @@
 #!/bin/sh -x
 set -eu
 
-CONFIG=/misc/nfs/config
+dir=$(dirname $0)
 
-link() { rm -rf $HOME/.$1; ln -s $CONFIG/$1 $HOME/.$1; }
-copy() { rm -rf $HOME/.$1; cp -p $CONFIG/$1 $HOME/.$1; }
+echo $dir
+
+link() { rm -rf $HOME/.$1; ln -s $dir/$1 $HOME/.$1; }
+copy() { rm -rf $HOME/.$1; cp -p $dir/$1 $HOME/.$1; }
 
 # ssh,gdb hate symlinks
-cp -p $CONFIG/ssh_config   $HOME/.ssh/config
+cp -p $dir/ssh_config   $HOME/.ssh/config
 copy gdbinit
 
 # these guys are fine with symlinks
