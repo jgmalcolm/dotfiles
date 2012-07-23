@@ -1,0 +1,93 @@
+Host triplebtack
+ User ricardo
+ HostName triplebtack.com
+
+Host office
+ HostName 71.22.197.168
+
+Host marietta
+ User dianamalcolm
+ HostName 71.204.52.190
+Host home
+ HostName 69.94.193.128
+
+Host tsfat
+ HostName tsfat.bme.gatech.edu
+
+#### AccelerEyes
+Host joker
+ User "Sandeep Maddipatla"
+Host jira
+ User jira
+Host coors
+ User root
+Host hitler
+ User malcolm
+Host enchilada
+ User malcolm
+Host napolean
+ User accelereyes
+Host svn
+ User itadmin
+Host bob
+ User hudson
+Host mohinder
+ User malcolm
+Host peter
+ User singh
+Host patton
+ User gallagher
+Host puff
+ User k5patel
+Host syler
+ User vvenu
+Host nfs
+ User accelereyes
+Host nina
+ User k5patel
+Host mmas
+ User malcolm
+Host zebra
+ User malcolm
+Host xenserver
+ User root
+
+Host leapfrog
+ HostName 216.154.197.121
+ User jimi
+Host bluehost
+ HostName 67.222.60.199
+ User diveyesc
+Host linode
+ HostName 74.207.224.250
+ User malcolm
+
+
+
+Host jgmalcolm
+ User malcolmj1
+ HostName 97.74.144.121
+
+Host *
+  Protocol 2,1
+  KeepAlive yes
+
+  ForwardAgent no
+  ForwardX11 no
+
+  CheckHostIP yes
+  StrictHostKeyChecking no
+
+  HostbasedAuthentication no
+  RSAAuthentication yes
+  PasswordAuthentication yes
+
+  EscapeChar ~
+  BatchMode no
+
+  Compression yes
+  ConnectionAttempts=1
+
+  # connection sharing
+  #ControlMaster auto
+  #ControlPath /tmp/ssh_mux_%h_%p_%r
