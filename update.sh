@@ -1,7 +1,7 @@
 #!/bin/sh -x
 set -eu
 
-dir=$(dirname $0)
+dir=$(dirname $PWD/$0)
 
 echo $dir
 
