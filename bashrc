@@ -3,7 +3,7 @@
 # Time-stamp: <2012-07-07 12:26:54 malcolm>
 
 umask 002
-ulimit -c unlimited  # produce core files upon segfault
+#ulimit -c unlimited  # produce core files upon segfault
 
 shopt -s checkwinsize # reassess window size between commands
 
