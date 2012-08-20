@@ -331,6 +331,9 @@ something to do with 'defun which I obviously don't know much about."
   )
 (add-hook 'view-mode-hook 'my-view-mode-setup)
 
+;; update TAGS when file saved
+(require 'ctags-update)
+(ctags-update-minor-mode 1)
 
 ;; Man mode
 (setq
