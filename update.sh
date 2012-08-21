@@ -1,9 +1,9 @@
 #!/bin/sh -x
 set -eu
 
-dir=$(dirname $PWD/$0)
-
-echo $dir
+[ -r $PWD/$0 ] &&
+  dir=$(dirname $PWD/$0) ||
+  dir=$(dirname $0)
 
 link() { rm -rf $HOME/.$1; ln -s $dir/$1 $HOME/.$1; }
 copy() { rm -rf $HOME/.$1; cp -p $dir/$1 $HOME/.$1; }
