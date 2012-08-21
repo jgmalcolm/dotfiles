@@ -1,4 +1,4 @@
-#!/bin/sh -x
+#!/bin/sh
 set -eu
 
 [ -r $PWD/$0 ] &&
@@ -8,6 +8,7 @@ set -eu
 link() { rm -rf $HOME/.$1; ln -s $dir/$1 $HOME/.$1; }
 copy() { rm -rf $HOME/.$1; cp -p $dir/$1 $HOME/.$1; }
 
+set -x
 # ssh,gdb hate symlinks
 cp $dir/ssh_config   $HOME/.ssh/config
 chmod 644 $HOME/.ssh/config
