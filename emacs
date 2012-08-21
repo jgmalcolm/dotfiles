@@ -528,6 +528,7 @@ something to do with 'defun which I obviously don't know much about."
  flyspell-highlight-properties t)
 (global-set-key "\C-c\C-j" 'flyspell-check-previous-highlighted-word)
 (add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'php-mode-hook 'flyspell-mode)
 
 (defun complete-or-indent ()
   "Complete word if at end of one, else indent [emacs-wiki]."
