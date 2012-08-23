@@ -151,8 +151,6 @@ Returns reference to modified sequence."
 (add-to-list 'completion-ignored-extensions ".d")
 
 
-(require 'tbemail)
-
 ;; Tramp
 (require 'tramp)
 (setq
