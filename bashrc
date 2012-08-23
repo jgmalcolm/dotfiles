@@ -65,7 +65,7 @@ function gb {
 
 function matrix { tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"; }
 
-export LESS="-iFmrSX" #QR
+export LESS="-iFmRSX" #QR
 export LESSOPEN="|lesspipe.sh %s"  # special less file hooks
 export LESSCLOSE=
 
