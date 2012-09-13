@@ -91,8 +91,9 @@ export PROMPT_COMMAND="history -a && history -r" # each cmd updates hist on disk
 touch ~/.bookmarks
 . ~/.bookmarks
 function mark {  # mark current directory
-    mv ~/.bookmarks /tmp
-    grep -v "export DIR_$1=" /tmp/.bookmarks >~/.bookmarks
+    tmp=$(mktemp -t tmpXXX)
+    mv ~/.bookmarks $tmp
+    grep -v "export DIR_$1=" $tmp >~/.bookmarks
     echo "export DIR_$1=$PWD" >>~/.bookmarks
 }
 
