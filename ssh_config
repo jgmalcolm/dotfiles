@@ -59,22 +59,21 @@ Host linode
  User malcolm
 
 
+Host aideveloper
+ User james
 
-Host jgmalcolm
- User malcolmj1
- HostName 97.74.144.121
 
 Host *
   Protocol 2,1
-  KeepAlive yes
+  TCPKeepAlive yes
 
-  ForwardAgent yes
+  #ForwardAgent yes
   ForwardX11 yes
 
-  CheckHostIP yes
+  CheckHostIP no
   StrictHostKeyChecking no
-
   HostbasedAuthentication no
+
   RSAAuthentication yes
   PasswordAuthentication yes
 
