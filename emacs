@@ -1,11 +1,9 @@
-;; Time-stamp: <2011-09-28 13:34:10 malcolm>
+;; Time-stamp: <2012-09-13 12:00:33 malcolm>
 (setq
  user-full-name "James Malcolm"
  user-mail-address "jimi.malcolm@gmail.com"
  mail-default-reply-to user-mail-address)
 (add-to-list 'load-path (expand-file-name "~/.elisp/"))
-(add-to-list 'load-path (expand-file-name "~/.eacs.d/weblogger/"))
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp")
 
 ;; debug -- keep near top
 (setq
@@ -897,8 +895,7 @@ in 'my-shebang-patterns."
  '(diff-hunk-header ((t (:foreground "#fbde2d"))))
  '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
  '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
- '(diff-removed ((t (:foreground "#de1923"))))
- )
+ '(diff-removed ((t (:foreground "#de1923")))))
 
 (server-start)
 
@@ -917,3 +914,9 @@ in 'my-shebang-patterns."
                    nil
                    t
                    nil))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(send-mail-function (quote mailclient-send-it)))
