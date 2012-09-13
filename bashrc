@@ -1,6 +1,6 @@
 #!/bin/sh
 # run on non-interactive logins
-# Time-stamp: <2012-07-07 12:26:54 malcolm>
+# Time-stamp: <2012-09-12 22:41:27 malcolm>
 
 umask 002
 #ulimit -c unlimited  # produce core files upon segfault
@@ -135,7 +135,7 @@ done
 set visual-bell none
 
 BLOCK_SIZE='si'
-[[ `uname` =~ CYGWIN.* ]] || TERM=xterm
+TERM=xterm-256color
 
 # setup PATH (top of list is highest precedence)
 [[ `uname` =~ CYGWIN.* ]] || PATH=   # windows already set PATH
