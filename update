@@ -5,12 +5,11 @@ set -eu
   dir=$(dirname $PWD/$0) ||
   dir=$(dirname $0)
 
-link() { rm -rf $HOME/.$1; ln -s $dir/$1 $HOME/.$1; }
-copy() { rm -rf $HOME/.$1; cp -p $dir/$1 $HOME/.$1; }
+link() { rm -rf $HOME/.$1; ln -vs $dir/$1 $HOME/.$1; }
+copy() { rm -rf $HOME/.$1; cp -vp $dir/$1 $HOME/.$1; }
 
-set -x
 # ssh,gdb hate symlinks
-cp $dir/ssh_config   $HOME/.ssh/config
+cp -v $dir/ssh_config   $HOME/.ssh/config
 chmod 644 $HOME/.ssh/config
 copy gdbinit
 
