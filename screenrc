@@ -1,3 +1,4 @@
+setenv TERM xterm-256color
 autodetach            on
 hardcopydir           /tmp/
 startup_message       off

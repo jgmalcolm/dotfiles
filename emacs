@@ -19,6 +19,7 @@
  auto-fill-function nil
  indent-tabs-mode nil)
 (global-font-lock-mode 1)
+(setenv "TERM" "xterm-256color")
 (setq
  initial-scratch-message nil
  transient-mark-mode t
