@@ -1,6 +1,5 @@
 #!/bin/sh
 # run on non-interactive logins
-# Time-stamp: <2012-09-12 22:41:27 malcolm>
 
 umask 002
 #ulimit -c unlimited  # produce core files upon segfault
@@ -48,8 +47,8 @@ function tmpdir { pushd `mktemp -d -t tmpXXX`; }
 function calc   { echo "$@" | bc -l; }
 function E { emacs -bg black -fg white $@; }
 function e { emacsclient -t $@; }
-function ex { [[ $# == 0 ]] && emacsclient -c -n || ssh -Xf $@ emacsclient -c -n; exit; }
-function xxpdf { xpdf $@ & exit; }
+function ex { [[ $# == 0 ]] && emacsclient -c -n || ssh -Xf $@ emacsclient -c -n & exit; }
+function pdf { xpdf $@ & exit; }
 function mdb { matlab -Dgdb; }
 function c { cal -3 $@; }
 function svndi { svn di $@ | colordiff | buffer; }
