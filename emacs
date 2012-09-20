@@ -1,4 +1,3 @@
-;; Time-stamp: <2012-09-13 12:00:33 malcolm>
 (setq
  user-full-name "James Malcolm"
  user-mail-address "jimi.malcolm@gmail.com"
@@ -914,9 +913,3 @@ in 'my-shebang-patterns."
                    nil
                    t
                    nil))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(send-mail-function (quote mailclient-send-it)))
