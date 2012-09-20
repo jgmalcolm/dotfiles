@@ -134,7 +134,6 @@ done
 set visual-bell none
 
 BLOCK_SIZE='si'
-TERM=xterm-256color
 
 # setup PATH (top of list is highest precedence)
 [[ `uname` =~ CYGWIN.* ]] || PATH=   # windows already set PATH
