@@ -68,7 +68,7 @@ Host *
   TCPKeepAlive yes
 
   #ForwardAgent yes
-  #ForwardX11 yes
+  ForwardX11 yes
 
   CheckHostIP no
   StrictHostKeyChecking no

@@ -14,7 +14,7 @@ chmod 644 $HOME/.ssh/config
 copy gdbinit
 
 # these guys are fine with symlinks
-link xinitrc
+[ $(uname) == "Darwin" ] || link xinitrc
 link bashrc
 link bash_profile
 link screenrc
