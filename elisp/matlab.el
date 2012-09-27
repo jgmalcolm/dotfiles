@@ -694,7 +694,7 @@ Argument LIMIT is the maximum distance to search."
 				 "if" "elseif" "else"
 				 "endfunction" "return" "break" "continue"
 				 "switch" "case" "otherwise" "try"
-				 "catch" "tic" "toc" "spmd" "gfor" "gend")
+				 "catch" "tic" "toc" "spmd" "gfor" "gend" "parfor")
   "List of keywords for MATLAB used in highlighting.
 Customizing this variable is only useful if `regexp-opt' is available."
   :group 'matlab
@@ -742,7 +742,7 @@ Customizing this variable is only useful if `regexp-opt' is available."
 	(concat "\\<\\(" (regexp-opt matlab-keyword-list) "\\)\\>")
       ;; Original hard-coded value for pre Emacs 20.1
       "\\<\\(break\\|ca\\(se\\|tch\\)\\|e\\(lse\\(\\|if\\)\\|ndfunction\\)\
-\\|for\\|global\\|if\\|otherwise\\|return\\|switch\\|try\\|while\\|tic\\|toc\\|spmd\\|gfor\\|gend\\)\\>")
+\\|for\\|global\\|if\\|otherwise\\|return\\|switch\\|try\\|while\\|tic\\|toc\\|spmd\\|gfor\\|gend\\|parfor\\)\\>")
     '(0 font-lock-keyword-face))
    ;; The end keyword is only a keyword when not used as an array
    ;; dereferencing part.
@@ -1170,11 +1170,11 @@ Return nil if it is being used to dereference an array."
 (defconst matlab-defun-regex "^\\s-*function[ \t.[]"
   "Regular expression defining the beginning of a MATLAB function.")
 
-(defconst matlab-block-beg-pre-if "function\\|for\\|while\\|if\\|switch\\|try\\|tic\\|gfor\\|spmd"
+(defconst matlab-block-beg-pre-if "function\\|for\\|while\\|if\\|switch\\|try\\|tic\\|gfor\\|spmd\\|parfor"
   "Keywords which mark the beginning of an indented block.
 Includes function.")
 
-(defconst matlab-block-beg-pre-no-if "for\\|while\\|if\\|switch\\|try\\|tic\\|gfor\\|spmd"
+(defconst matlab-block-beg-pre-no-if "for\\|while\\|if\\|switch\\|try\\|tic\\|gfor\\|spmd\\|parfor"
   "Keywords which mark the beginning of an indented block.
 Excludes function.")
 
