@@ -1,3 +1,4 @@
+; -*- mode: Emacs-Lisp;-*-
 (setq
  user-full-name "James Malcolm"
  user-mail-address "jimi.malcolm@gmail.com"
