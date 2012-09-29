@@ -61,13 +61,16 @@ Host linode
 
 Host aideveloper
  User james
+Host aitrader
+ User james
+Host pawn*
+ User wooster
 
 
 Host *
   Protocol 2,1
   TCPKeepAlive yes
 
-  #ForwardAgent yes
   ForwardX11 yes
 
   CheckHostIP no
@@ -81,4 +84,4 @@ Host *
   BatchMode no
 
   Compression yes
-  ConnectionAttempts=1
+  ConnectionAttempts 1
