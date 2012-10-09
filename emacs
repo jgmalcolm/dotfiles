@@ -625,7 +625,7 @@ something to do with 'defun which I obviously don't know much about."
   ;; c-mode-base-map because c-mode-map, c++-mode-map, objc-mode-map,
   ;; java-mode-map, idl-mode-map, and pike-mode-map inherit from it.
   (mapcar (lambda (mode-map)
-            (define-key mode-map (kbd "<tab>") 'complete-or-indent)
+            ;;(define-key mode-map (kbd "<tab>") 'complete-or-indent)
             (define-key mode-map "\C-cc" 'comment-region)
             (define-key mode-map "\C-c\C-c" 'compile)
             (define-key mode-map "\C-x\C-h" 'eshell)
