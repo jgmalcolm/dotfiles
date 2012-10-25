@@ -62,8 +62,10 @@ Host linode
 Host aideveloper
  User james
 Host aitrader
- User james
+ User wooster
 Host pawn*
+ User wooster
+Host king
  User wooster
 
 
