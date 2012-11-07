@@ -171,3 +171,4 @@ export PAGER=less
 export VISUAL=vim
 export EDITOR=vim
 export ALTERNATE_EDITOR=vi
+export NETHACKOPTIONS  # for screen fun
