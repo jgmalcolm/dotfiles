@@ -73,7 +73,7 @@ Host *
   Protocol 2,1
   TCPKeepAlive yes
 
-  ForwardX11 yes
+  ForwardX11 no
 
   CheckHostIP no
   StrictHostKeyChecking no
