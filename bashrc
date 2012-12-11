@@ -121,15 +121,20 @@ function _jump { # completion command for jump
 complete -F _jump j
 shopt -s progcomp
 
-for base in /etc /opt/local/etc; do
-    if [ -r $base/bash_completion.d/git ]; then
-        . $base/bash_completion.d/git
-        complete -o bashdefault -o default -o nospace -F _git g # alias g=git
-        export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\]$(__git_ps1 "{%s}") \$ '
-        break
-    else
-        export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\] \$ '
-    fi
+# tab-complete git tags/branches/etc.
+for base in /etc/bash_completion.d /opt/local/etc/bash_completion.d /usr/share/bash-completion/completions; do
+    [ -r $base/git ] || continue
+    . $base/git
+    complete -o bashdefault -o default -o nospace -F _git g # alias g=git
+    break
+done
+
+# setup git prompt if possible (set default first)
+export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\] \$ '
+for p in /usr/share/git/git-prompt.sh /usr/share/git/completion/git-prompt.sh; do
+    [ -r $p ] || continue
+    . $p
+    export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\]$(__git_ps1 "{%s}") \$ '
 done
 
 set visual-bell none
