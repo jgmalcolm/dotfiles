@@ -637,6 +637,10 @@ something to do with 'defun which I obviously don't know much about."
 (add-hook 'c++-mode-hook 'my-c-mode-common-hook)
 (add-to-list 'auto-mode-alist '("\\.txx$" . c++-mode))
 
+(autoload 'lua-mode "lua-mode" "Lua editing mode." t)
+(add-to-list 'auto-mode-alist '("\\.lua$" . lua-mode))
+(add-to-list 'interpreter-mode-alist '("lua" . lua-mode))
+
 (when (require 'rainbow-delimiters nil 'noerror)
   (add-hook 'c-mode-hook 'rainbow-delimiters-mode)
   (add-hook 'c++-mode-hook 'rainbow-delimiters-mode)
