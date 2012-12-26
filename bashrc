@@ -81,8 +81,8 @@ fi
 # timestap history
 export HISTFILE=~/.bash_history
 echo "# $(date)" >>$HISTFILE
-export HISTFILESIZE=10000
-export HISTSIZE=10000
+export HISTFILESIZE=100000
+export HISTSIZE=100000
 export HISTCONTROL=ignoreboth # Don't store duplicate adjacent items in the history
 shopt -s histappend
 export PROMPT_COMMAND="history -a && history -r" # each cmd updates hist on disk
