@@ -19,7 +19,7 @@ alias g=git
 alias gi=git
 alias gs='git st'
 alias gd='git di'
-alias gf='git fetch -pt --all'
+alias gf='git f'
 alias dm='du -sm * | sort -n'
 alias gdb='gdb --quiet'
 #function _head {
