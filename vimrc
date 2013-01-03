@@ -131,7 +131,7 @@ function! CleverTab( )
   endif
 endfunction
 
-set scrolloff=8
+set scrolloff=8   " set high to keep cursor in center of screen
 set autoread
 
 " Make <F8> diff the current buffer with it's file on disk.
