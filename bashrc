@@ -159,6 +159,7 @@ for p in \
     /usr/X11R6/bin \
     /usr/local/java/default/bin \
     /usr/local/sge/ge2011.11/bin/linux-x64 \
+    /usr/local/groovy/groovy-2.0.1/bin \
     ; do
   [ -x $p ] && PATH=$PATH:$p
 done
@@ -177,3 +178,5 @@ export VISUAL=vim
 export EDITOR=vim
 export ALTERNATE_EDITOR=vi
 export NETHACKOPTIONS  # for screen fun
+
+export CLASSPATH=/qdata/backTest/repo/v0.9/aiq/dist/*:/qdata/backTest/repo/v0.9/aiq/lib/*
