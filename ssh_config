@@ -68,6 +68,12 @@ Host pawn*
 Host king
  User wooster
 
+Host 10.10.*
+  CheckHostIP no
+  StrictHostKeyChecking no
+  #HostbasedAuthentication no
+  UserKnownHostsFile /dev/null
+
 
 Host *
   Protocol 2,1
@@ -75,9 +81,6 @@ Host *
 
   ForwardX11 no
 
-  CheckHostIP no
-  StrictHostKeyChecking no
-  HostbasedAuthentication no
 
   RSAAuthentication yes
   PasswordAuthentication yes
