@@ -29,7 +29,6 @@ alias gdb='gdb --quiet'
 #}
 #alias head=_head
 #alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
-function md { mkdir -p "$1" && cd "$1"; } # makedir and jump
 alias hd='od -Ax -tx1z -v' # hexdump
 
 
@@ -44,6 +43,7 @@ function line   { sed "$1q;d" $2; }
 function rmline { sed -i'' -e "$1d" $2; }
 function buffer { (test -t 1 && less -F - || cat) } # stdin to less if terminal
 function tmpdir { pushd `mktemp -d -t tmpXXX`; }
+function mkdircd { mkdir -p $1 && cd $1; }
 function calc   { echo "$@" | bc -l; }
 function E { emacs -bg black -fg white $@; }
 function e { emacsclient -t $@; }
