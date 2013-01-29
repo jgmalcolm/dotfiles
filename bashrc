@@ -131,9 +131,9 @@ done
 
 # setup git prompt if possible (set default first)
 export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\] \$ '
-for p in /usr/share/git/git-prompt.sh /usr/share/git/completion/git-prompt.sh; do
-    [ -r $p ] || continue
-    . $p
+for p in /usr/share/git /usr/share/git/completion; do # /Users/malcolm/src/others/git-prompt; do
+    [ -r $p/git-prompt.sh ] || continue
+    . $p/git-prompt.sh
     export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\]$(__git_ps1 "{%s}") \$ '
 done
 
