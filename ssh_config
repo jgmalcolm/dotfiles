@@ -65,6 +65,10 @@ Host aitrader
  User wooster
 Host king
  User wooster
+Host queen
+ User wooster
+Host rook
+ User wooster
 
 Host pawn*
   User wooster
