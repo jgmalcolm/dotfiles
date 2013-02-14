@@ -577,7 +577,7 @@ something to do with 'defun which I obviously don't know much about."
   (my-algol-mode))
 (defun my-c++-mode ()
   "C++ mode with adjusted defaults."
-  (c-mode)
+  (c++-mode)
   (my-algol-mode))
 
 (autoload 'js2-mode "js2" nil t)
@@ -692,7 +692,7 @@ something to do with 'defun which I obviously don't know much about."
    matlab-fill-strings nil
    matlab-indent-function t
    matlab-highlight-block-match-flag t
-   matlab-verify-on-save-flag t
+   matlab-verify-on-save-flag nil
    matlab-handle-graphics-list nil
    matlab-show-periodic-code-details-flag nil))
 (add-hook 'matlab-mode-hook 'my-matlab-mode)
@@ -803,14 +803,6 @@ in 'my-shebang-patterns."
 (setq
  iswitchb-max-to-show 7
  iswitchb-default-method 'samewindow)
-
-(require 'mediawiki)
-(setq mediawiki-site-alist '(("Wikipedia" "http://en.wikipedia.org/w/"
-                              "malcolmj1" "edinamn" "Main Page")
-                             ("Internal" "http://coors.a/wiki/"
-                              "malcolm" "kfm@$ter#" "Main Page")
-                             ("External" "http://wiki.accelereyes.com/wiki/"
-                              "malcolm" "edinamn" "Main Page")))
 
 
 (defun swap-words (a b)
