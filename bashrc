@@ -36,7 +36,6 @@ export GREP_OPTIONS=--color=auto
 export GREP_COLOR="1;33;40"  # yellow on black
 alias r='stty sane'
 
-function h { history | tail -15; }
 function s { local cmd="screen -ADR $(whoami)"; [[ $# == 0 ]] && $cmd || ssh -t $@ $cmd; }
 function x { local cmd="screen -Ax  $(whoami)"; [[ $# == 0 ]] && $cmd || ssh -t $@ $cmd; }
 function line   { sed "$1q;d" $2; }
@@ -84,8 +83,11 @@ echo "# $(date)" >>$HISTFILE
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTCONTROL=ignoreboth # Don't store duplicate adjacent items in the history
-shopt -s histappend
 export PROMPT_COMMAND="history -a && history -r" # each cmd updates hist on disk
+shopt -s histappend
+bind '"\e[A": history-search-backward'
+bind '"\e[B": history-search-forward'
+
 
 # adapted from github.com/huyng/bashmarks
 touch ~/.bookmarks
