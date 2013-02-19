@@ -13,8 +13,6 @@ Host tsfat
 #### AccelerEyes
 Host joker
  User "Sandeep Maddipatla"
-Host jira
- User jira
 Host coors
  User root
 Host foobar
@@ -23,10 +21,8 @@ Host enchilada
  User malcolm
 Host napolean
  User accelereyes
-Host svn
- User itadmin
 Host bob
- User hudson
+ User jenkins
 Host mohinder
  User malcolm
 Host peter
@@ -37,8 +33,6 @@ Host puff
  User k5patel
 Host diablo
  User accelereyes
-Host syler
- User vvenu
 Host nfs
  User accelereyes
 Host nina
