@@ -175,8 +175,8 @@ export SGE_QMASTER_PORT=7890
 export SGE_ROOT=/usr/local/sge/ge2011.11
 
 export PAGER=less
-export VISUAL=vim
-export EDITOR=vim
+export VISUAL='emacsclient -t'
+export EDITOR='emacsclient -t'
 export ALTERNATE_EDITOR=vi
 export NETHACKOPTIONS  # for screen fun
 
