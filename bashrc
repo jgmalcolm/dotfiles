@@ -83,11 +83,10 @@ echo "# $(date)" >>$HISTFILE
 export HISTFILESIZE=100000
 export HISTSIZE=100000
 export HISTCONTROL=ignoreboth # Don't store duplicate adjacent items in the history
-export PROMPT_COMMAND="history -a && history -r" # each cmd updates hist on disk
-shopt -s histappend
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
-
+export PROMPT_COMMAND="history -a" # each cmd updates hist on disk
+# 'history -r' slows down the prompt
 
 # adapted from github.com/huyng/bashmarks
 touch ~/.bookmarks
