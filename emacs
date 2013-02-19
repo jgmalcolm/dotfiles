@@ -798,6 +798,10 @@ in 'my-shebang-patterns."
         (set-buffer-modified-p nil)
         t))))
 
+(require 'git-commit)
+(add-hook 'git-commit-mode-hook 'turn-on-flyspell)
+(add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
+
 
 (iswitchb-mode 1)
 (setq
