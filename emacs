@@ -27,14 +27,14 @@
  visible-bell t
  visual-bell t                          ; no beeping, just flash screen
  make-backup-files nil                  ; no backup files
- default-major-mode 'text-mode
+ default-major-mode 'fundamental-mode
  inhibit-startup-message nil
  message-log-max t
  search-highlight t
  query-replace-highlight t
  indicate-buffer-boundaries t
  indicate-empty-lines t
- kill-whole-line t
+ kill-whole-line t                      ; ctrl-k
  garbage-collection-messages nil        ; annoying
  require-final-newline t                ; always ensure newline before EOF
  next-line-add-newlines nil             ; no newlines when scrolling down
@@ -44,10 +44,12 @@
  next-screen-context-lines 0            ; scroll full screen like less
  case-fold-search t                     ; case insensitive search
  ispell-silently-savep t                ; save personal dictionary sans conf
- revert-without-query '("\\.log$")
+ revert-without-query '("\\.log$")      ; watching log files
  diff-default-read-only t
  diff-switches "-uw" ; 'c' context, 'u' - universal (+/-)
  )
+(delete-selection-mode t)
+
 
 (setq completion-ignore-case t                 ; ignore case when completing...
       read-file-name-completion-ignore-case t) ; ...filenames too
