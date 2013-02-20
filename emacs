@@ -8,10 +8,9 @@
 ;; debug -- keep near top
 (setq
  debug-on-error nil                     ; enter debugger on errors
- stack-trace-on-error nil               ; show backtrace of error on debug
  debug-on-quit nil                      ; don't debug when C-g is hit
  debug-on-signal nil                    ; debug any/every error
- )
+)
 
 (setq-default
  auto-fill-function nil
