@@ -175,7 +175,7 @@ export SGE_ROOT=/usr/local/sge/ge2011.11
 export PAGER=less
 export VISUAL='emacsclient -t'
 export EDITOR='emacsclient -t'
-export ALTERNATE_EDITOR=vi
+export ALTERNATE_EDITOR=vim
 export NETHACKOPTIONS  # for screen fun
 
 export CLASSPATH=/qdata/backTest/repo/v0.9/aiq/dist/*:/qdata/backTest/repo/v0.9/aiq/lib/*
