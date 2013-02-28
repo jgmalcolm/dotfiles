@@ -5,6 +5,7 @@ setxkbmap -option terminate:ctrl_alt_bksp
 setxkbmap -option altwin:ctrl_alt_win
 setxkbmap -option caps:ctrl_modifier
 xmodmap -e 'keycode 22 = Delete'  # apple keyboard
+xset r rate 150 30 # delay rate
 
 xsetroot -solid black -cursor_name top_left_arrow
 
