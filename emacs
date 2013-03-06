@@ -72,16 +72,6 @@
 ;(require 'undo-tree)
 ;(global-undo-tree-mode)
 
-(when (boundp 'aquamacs-version)
-  (tabbar-mode 0)
-  (aquamacs-autoface-mode 0)
-  (setq
-   aquamacs-styles-mode nil
-   one-buffer-one-frame-mode nil
-   aquamacs-save-options-on-quit nil
-   mac-command-modifier 'alt
-   mac-option-modifier 'meta))
-
 (setq
    x-select-enable-clipboard 't
    smart-frame-positioning-mode nil
