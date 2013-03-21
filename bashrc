@@ -5,6 +5,7 @@ umask 002
 #ulimit -c unlimited  # produce core files upon segfault
 
 shopt -s checkwinsize # reassess window size between commands
+shopt -s cdspell # fix 'cd folder' spelling mistakes
 
 alias ls="BLOCK_SIZE=\'1 ls -1 --color" # enable thousands grouping
 alias l='ls'
