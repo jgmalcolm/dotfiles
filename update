@@ -24,4 +24,5 @@ link elisp
 link eshell
 link gitconfig
 link vimrc
-link slate
+#link slate
+link xpdfrc
