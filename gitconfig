@@ -37,7 +37,3 @@
   added = yellow
   changed = green
   untracked = cyan
-
-[user]
-  name = hudson
-  email = hudson@accelereyes.com
