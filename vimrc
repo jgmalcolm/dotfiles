@@ -66,6 +66,13 @@ set textwidth=78 shiftwidth=4 tabstop=4 softtabstop=4 expandtab joinspaces
 
 " highlight whitespace
 set list listchars=tab:>.,trail:.,extends:#,nbsp:.
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd FileType * autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
