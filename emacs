@@ -376,15 +376,6 @@ something to do with 'defun which I obviously don't know much about."
 
 (setq time-stamp-active t)
 (add-hook 'write-file-hooks 'time-stamp)
-
-
-(defun remove-trailing-whitespace ()
-  "Remove whitespace at end of lines throughout entire buffer."
-  (interactive)
-  (save-excursion
-    (goto-char (point-min))
-    (while (search-forward "[ \t]+$" nil t
-                           (replace-match "" nil t)))))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; print function documentation in minibuffer as you type
