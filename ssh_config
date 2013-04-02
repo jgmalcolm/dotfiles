@@ -1,5 +1,6 @@
 Host office
- HostName 71.22.197.168
+ #HostName 71.22.197.168
+ HostName 71.204.29.63
 
 Host marietta
  User dianamalcolm
