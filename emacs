@@ -692,6 +692,7 @@ something to do with 'defun which I obviously don't know much about."
 
 
 (add-to-list 'auto-mode-alist '("\\.cu$" . c++-mode))
+(add-to-list 'auto-mode-alist '("\\.cui$" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.inl$" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cl$" . c++-mode))
 
