@@ -10,5 +10,5 @@ hardstatus alwayslastline "%{.kw}%-w%{.rW}%n %t%{-}%+w %=%{g} %H %{y} %d %M %C%a
 altscreen on
 
 screen -t top   9 nice -20 top -d 30
-screen -t emacs 0 emacs -nw
+screen -t emacs 0 /usr/bin/env TERM=xterm-256color emacs -nw
 screen 1
