@@ -54,7 +54,7 @@ alias unansi='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"' # strip ansi
 function c { cal -3 $@; }
 function svndi { svn di $@ | colordiff | buffer; }
 alias svnst='svn st'
-function dos2unix { sed 's/\o15//g' -i $@; }
+function dos2unix { sed -i'' -e 's///g' $@; }
 alias gup='git up'
 function gb {
     fmt='%ci %h %C(yellow)%ar%C(reset)%C(green)%d%C(reset) %C(red)%an%Creset %s'
