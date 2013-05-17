@@ -376,6 +376,11 @@ something to do with 'defun which I obviously don't know much about."
 
 (setq time-stamp-active t)
 (add-hook 'write-file-hooks 'time-stamp)
+
+;; show whitespace
+(setq whitespace-style '(lines)) ; '(tabs trailing lines tab-mark))
+(setq whitespace-line-column 78)
+(global-whitespace-mode 1)
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 ;; print function documentation in minibuffer as you type
@@ -492,13 +497,6 @@ something to do with 'defun which I obviously don't know much about."
           ".toc" ".nav" ".bbl" ".blg" ".idx"
           ".rel"))
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
-
-(defun del2white ()
-  "Deletes whitespace up to the next non-whitespace char."
-  (interactive)
-  (save-excursion
-    (if (re-search-forward "[ \t\r\n]*[^ \t\r\n]" nil t)
-        (delete-region (match-beginning 0) (- (point) 1)))))
 
 ;; flyspell
 (autoload 'flyspell-mode "flyspell" "On-the-fly spelling checker." t)
