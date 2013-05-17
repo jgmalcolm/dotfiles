@@ -71,3 +71,6 @@ Host *
   #StrictHostKeyChecking no
   #HostbasedAuthentication no
   #UserKnownHostsFile /dev/null
+
+  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_dsa
