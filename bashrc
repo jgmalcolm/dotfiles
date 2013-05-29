@@ -172,6 +172,9 @@ export SGE_EXECD_PORT=6445
 export SGE_QMASTER_PORT=7890
 export SGE_ROOT=/usr/local/sge/ge2011.11
 
+
+[ $TERM == "screen.rxvt" ] && export TERM=xterm-256color
+
 export PAGER=less
 export VISUAL='emacsclient -t'
 export EDITOR='emacsclient -t'
