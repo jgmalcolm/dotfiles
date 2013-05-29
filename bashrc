@@ -69,8 +69,7 @@ export LESS="-iFmRSX" #QR
 export LESSOPEN="|lesspipe.sh %s"  # special less file hooks
 export LESSCLOSE=
 
-alias m="matlab -nojvm -nosplash"
-alias M="matlab -nodesktop -nosplash"
+alias m="matlab -nodesktop -nosplash"
 
 if [[ `uname -m` == x86_64 ]]; then ARCH=64; fi
 if [[ `uname` == Darwin ]]; then
