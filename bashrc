@@ -65,6 +65,7 @@ function gb {
 
 function matrix { tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"; }
 
+# http://www.gnu.org/software/src-highlite/source-highlight.html#Using-source_002dhighlight-with-less
 export LESS="-iFmRSX" #QR
 export LESSOPEN="|lesspipe.sh %s"  # special less file hooks
 export LESSCLOSE=
