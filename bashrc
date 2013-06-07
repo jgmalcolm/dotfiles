@@ -81,10 +81,10 @@ fi
 # timestap history
 export HISTFILE=~/.bash_history
 echo "# $(date)" >>$HISTFILE
-export HISTFILESIZE=100000
-export HISTSIZE=100000
+export HISTFILESIZE=1000
+export HISTSIZE=1000
 export HISTCONTROL=ignoreboth # Don't store duplicate adjacent items in the history
-export PROMPT_COMMAND="history -a" # each cmd updates hist on disk
+export PROMPT_COMMAND="history -a && history -r" # each cmd updates hist on disk
 # 'history -r' slows down the prompt
 
 # adapted from github.com/huyng/bashmarks
