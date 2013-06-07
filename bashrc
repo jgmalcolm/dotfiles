@@ -130,6 +130,7 @@ for base in /etc/bash_completion.d /opt/local/etc/bash_completion.d /usr/share/b
 done
 
 # setup git prompt if possible (set default first)
+# ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]
 export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\] \$ '
 for p in /usr/share/git /usr/share/git/completion; do # /Users/malcolm/src/others/git-prompt; do
     [ -r $p/git-prompt.sh ] || continue
