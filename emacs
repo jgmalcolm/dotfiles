@@ -695,6 +695,22 @@ something to do with 'defun which I obviously don't know much about."
 (add-to-list 'auto-mode-alist '("\\.cl$" . c++-mode))
 
 
+;; markdown
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+(add-hook 'markdown-mode-hook 'turn-on-flyspell)
+(add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
+(defun my-markdown-mode-hook ()
+  "personal settings"
+  (local-set-key "\C-c\C-j" 'flyspell-check-previous-highlighted-word))
+(autoload 'yaml-mode "yaml-mode"
+   "Major mode for editing YAML files" t)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+
 (defun bsd-c-mode-user-setup ()
   "BSD c-mode"
   (interactive)
