@@ -94,12 +94,12 @@ function mark {  # mark current directory
     tmp=$(mktemp -t tmpXXX)
     mv ~/.bookmarks $tmp
     grep -v "export DIR_$1=" $tmp >~/.bookmarks
-    echo "export DIR_$1=$PWD" >>~/.bookmarks
+    echo "export DIR_$1='$PWD'" >>~/.bookmarks
 }
 
 function j {  # jump to bookmark
    . ~/.bookmarks
-   cd $(eval $(echo echo $(echo \$DIR_$1)))
+   cd "$(eval $(echo echo $(echo \$DIR_$1)))"
 }
 
 function list {  # list bookmarks (with dirname)
