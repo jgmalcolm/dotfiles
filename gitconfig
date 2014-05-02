@@ -37,3 +37,6 @@
   added = yellow
   changed = green
   untracked = cyan
+[user]
+	name = James Malcolm
+	email = me@jgmalcolm.com
