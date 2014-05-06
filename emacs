@@ -24,8 +24,9 @@
  show-trailing-whitespace t
  colon-double-space t
  pop-up-windows t
- visible-bell t
- visual-bell t                          ; no beeping, just flash screen
+ ;; visible-bell t
+ ;; visual-bell t                          ; no beeping, just flash screen
+ ring-bell-function 'ignore             ; do nothing
  make-backup-files nil                  ; no backup files
  default-major-mode 'fundamental-mode
  inhibit-startup-message nil
