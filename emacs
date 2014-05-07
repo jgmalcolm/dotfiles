@@ -818,9 +818,6 @@ in 'my-shebang-patterns."
             (replace-match (regexp-quote a))))
       )))
 
-;; (add-to-list 'load-path (expand-file-name "~/.emacs.d/skype"))
-;; (require 'skype)
-
 (remove-hook 'text-mode-hook 'auto-detect-longlines) ;; Aquamacs v1.4
 
 ;; crypt
