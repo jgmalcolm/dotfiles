@@ -457,7 +457,6 @@ something to do with 'defun which I obviously don't know much about."
 (defun my-text-mode-settings ()
   "My personal preferences for editing plain-text files."
   (delete-selection-mode t)
-  (flyspell-mode 1)
   ;; normal text settings
   (local-set-key (kbd "C-c C-v") 'view-mode)
   (local-set-key "\C-c\C-r" 'refill-mode)
@@ -474,8 +473,11 @@ something to do with 'defun which I obviously don't know much about."
    indent-tabs-mode nil))
 (add-hook 'fundamental-mode-hook 'my-text-mode-settings)
 (add-hook 'text-mode-hook 'my-text-mode-settings)
+(add-hook 'text-mode-hook 'turn-on-flyspell)
 (add-hook 'emacs-lisp-mode-hook 'my-text-mode-settings)
 (add-hook 'LaTeX-mode-hook 'my-text-mode-settings)
+(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
+
 
 ;; latex
 (setq TeX-auto-save t
