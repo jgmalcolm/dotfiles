@@ -1,55 +1,8 @@
-Host office
- HostName 71.204.29.63
-
 Host marietta
  User dianamalcolm
  HostName 71.204.52.190
 Host home
  HostName 69.94.193.128
-
-Host tsfat
- HostName tsfat.bme.gatech.edu
-
-#### AccelerEyes
-Host joker
- User "Sandeep Maddipatla"
-Host coors
- User root
-Host foobar
- User malcolm
-Host enchilada
- User malcolm
-Host napolean
- User accelereyes
-Host bob
- User jenkins
-Host mohinder
- User malcolm
-Host peter
- User accelereyes
-Host patton
- User accelereyes
-Host puff
- User k5patel
-Host diablo
- User accelereyes
-Host nfs
- User accelereyes
-Host nina
- User chris
-Host mmas
- User malcolm
-Host zebra
- User malcolm
-Host xenserver
- User root
-
-Host bluehost
- HostName 67.222.60.199
- User diveyesc
-Host linode
- HostName 74.207.224.250
- User malcolm
 
 Host *
   Protocol 2,1
