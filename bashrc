@@ -32,6 +32,11 @@ alias gdb='gdb --quiet'
 #alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
 alias hd='od -Ax -tx1z -v' # hexdump
 
+function afssh {
+    ssh -t -v -p 7331 tunnel@ec2-54-82-216-47.compute-1.amazonaws.com ssh -t $@
+}
+# alias afpipe='ssh -f -N -p 7331 tunnel@ec2-54-82-216-47.compute-1.amazonaws.com -L8080:mule:80 -L8090:mule:8090'
+
 
 export GREP_OPTIONS=--color=auto
 export GREP_COLOR="1;33;40"  # yellow on black
