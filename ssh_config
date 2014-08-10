@@ -10,7 +10,7 @@ Host *
 
   ForwardX11 no
 
-  RSAAuthentication yes
+  #RSAAuthentication yes
   PasswordAuthentication yes
 
   EscapeChar ~
@@ -25,5 +25,5 @@ Host *
   #HostbasedAuthentication no
   #UserKnownHostsFile /dev/null
 
-  IdentityFile ~/.ssh/id_rsa
+  #IdentityFile ~/.ssh/id_rsa
   IdentityFile ~/.ssh/id_dsa
