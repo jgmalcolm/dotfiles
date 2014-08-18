@@ -1,6 +1,6 @@
 ; -*- mode: Emacs-Lisp;-*-
 (setq
- user-full-name "James Malcolm"
+ user-full-name "malcolm"
  user-mail-address "me@jgmalcolm.com"
  mail-default-reply-to user-mail-address)
 (add-to-list 'load-path (expand-file-name "~/.elisp/"))
