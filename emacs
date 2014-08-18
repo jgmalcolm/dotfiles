@@ -475,30 +475,7 @@ something to do with 'defun which I obviously don't know much about."
 (add-hook 'text-mode-hook 'my-text-mode-settings)
 (add-hook 'text-mode-hook 'turn-on-flyspell)
 (add-hook 'emacs-lisp-mode-hook 'my-text-mode-settings)
-(add-hook 'LaTeX-mode-hook 'my-text-mode-settings)
-(add-hook 'LaTeX-mode-hook 'turn-on-flyspell)
 
-
-;; latex
-(setq TeX-auto-save t
-      TeX-parse-self t
-      TeX-save-query nil)
-(defun my-LaTeX-mode ()
-  "My LaTeX mode settings."
-  (setq ispell-parser 'tex)
-  (define-key LaTeX-mode-map "\C-c\C-j" 'flyspell-check-previous-highlighted-word)
-  (define-key LaTeX-mode-map "\C-x\C-h" 'eshell)
-  (font-lock-add-keywords
-      'LaTeX-mode
-      '(("\\<\\(autoref\\)" 1 font-lock-warning-face t)))
-
-  )
-(add-hook 'LaTeX-mode-hook 'my-LaTeX-mode)
-(mapcar '(lambda (ext)
-           (add-to-list 'completion-ignored-extensions ext))
-        '(".aux" ".log" ".brf" ".out" ".snm"
-          ".toc" ".nav" ".bbl" ".blg" ".idx"
-          ".rel"))
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
 
 ;; flyspell
