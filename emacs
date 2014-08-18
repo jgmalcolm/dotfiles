@@ -797,8 +797,6 @@ in 'my-shebang-patterns."
             (replace-match (regexp-quote a))))
       )))
 
-(remove-hook 'text-mode-hook 'auto-detect-longlines) ;; Aquamacs v1.4
-
 ;; crypt
 (require 'crypt++)
 (setq
