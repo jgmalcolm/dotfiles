@@ -14,7 +14,7 @@ nmap Q gqap
 
 set hidden
 set autoindent copyindent
-set helpfile=$VIMRUNTIME/doc/help.txt.gz
+set helpfile=$VIMRUNTIME/doc/help.txt
 
 " emacs-like navigation
 inoremap <C-A> <Esc>0i
