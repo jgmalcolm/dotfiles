@@ -475,6 +475,7 @@ something to do with 'defun which I obviously don't know much about."
 (add-hook 'text-mode-hook 'my-text-mode-settings)
 (add-hook 'text-mode-hook 'turn-on-flyspell)
 (add-hook 'emacs-lisp-mode-hook 'my-text-mode-settings)
+(add-hook 'writegood-mode 'my-text-mode-settings)
 
 (global-set-key (kbd "C-h") 'backward-delete-char-untabify)
 
@@ -867,7 +868,8 @@ in 'my-shebang-patterns."
  '(diff-hunk-header ((t (:foreground "#fbde2d"))))
  '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
  '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
- '(diff-removed ((t (:foreground "#de1923")))))
+ '(diff-removed ((t (:foreground "#de1923"))))
+ '(writegood-weasels-face ((t (:inherit font-lock-warning-face :background "brightblack")))))
 
 (server-start)
 
