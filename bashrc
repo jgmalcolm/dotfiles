@@ -183,8 +183,8 @@ export SGE_ROOT=/usr/local/sge/ge2011.11
 [ $TERM == "screen.rxvt" ] && export TERM=xterm-256color
 
 export PAGER=less
-export VISUAL='emacsclient -t'
-export EDITOR='emacsclient -t'
+export VISUAL='emacsclient'
+export EDITOR='emacsclient'
 export ALTERNATE_EDITOR=vim
 export NETHACKOPTIONS  # for screen fun
 
