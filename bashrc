@@ -7,7 +7,7 @@ umask 002
 shopt -s checkwinsize # reassess window size between commands
 shopt -s cdspell # fix 'cd folder' spelling mistakes
 
-alias ls="BLOCK_SIZE=\'1 ls -1 --color" # enable thousands grouping
+alias ls="BLOCK_SIZE=\'1 ls -1F --color" # enable thousands grouping
 alias l='ls'
 alias ll='ls -l'
 alias lrt='ls -rt'
@@ -79,7 +79,7 @@ alias m="matlab -nodesktop -nosplash"
 
 if [[ `uname -m` == x86_64 ]]; then ARCH=64; fi
 if [[ `uname` == Darwin ]]; then
-  alias ls='ls -1G' # Darwin hates '--color' parameter
+  alias ls='ls -1GF' # Darwin hates '--color' parameter
   c() { cal $@; }
 fi
 
