@@ -1,5 +1,3 @@
-"Jimi Malcolm - jimi.malcolm@gmail.com
-
 set vb t_vb=
 
 let mapleader=","
