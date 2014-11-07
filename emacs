@@ -781,12 +781,6 @@ in 'my-shebang-patterns."
 (add-hook 'git-commit-mode-hook (lambda () (toggle-save-place 0)))
 
 
-(iswitchb-mode 1)
-(setq
- iswitchb-max-to-show 7
- iswitchb-default-method 'samewindow)
-
-
 (defun swap-words (a b)
   "Replace all occurances of a with b and vice versa"
   (interactive "*sFirst Swap Word: \nsSecond Swap Word: ")
@@ -873,7 +867,20 @@ in 'my-shebang-patterns."
 
 (server-start)
 
-
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+(define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(setq helm-quick-update                     t ; do not display invisible candidates
+      helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
+      helm-buffers-fuzzy-matching           t ; fuzzy matching buffer names when non--nil
+      helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
+      helm-ff-search-library-in-sexp        t ; search for library in `require' and `declare-function' sexp.
+      helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+      helm-ff-file-name-history-use-recentf t
+      helm-exit-idle-delay                  0)
+(helm-mode 1)
 
 (add-to-list 'crypt-encryption-alist
              ;; Blowfish encryption
