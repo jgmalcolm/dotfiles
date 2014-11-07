@@ -1,8 +1,5 @@
 #!/bin/sh
 # run for interactive logins
-# Time-stamp: <2005-03-02 23:23:11 malcolm>
-
-#echo -ne "\033(U"
 
 case `uname` in
     Linux)
