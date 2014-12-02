@@ -268,9 +268,9 @@ something to do with 'defun which I obviously don't know much about."
 ;(load "ange-ftp")
 
 ;; menu/tool/scroll bars
-(menu-bar-mode -1)
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+(menu-bar-mode 0)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
 (if window-system (mwheel-install))     ; mouse scroll wheel works
 (setq
  display-time-day-and-date t
@@ -872,8 +872,10 @@ in 'my-shebang-patterns."
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (package-initialize)
+(require 'helm)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
+(define-key helm-map (kbd "C-h") 'backward-delete-char-untabify) ; delete backward
 (setq helm-quick-update                     t ; do not display invisible candidates
       helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-buffers-fuzzy-matching           t ; fuzzy matching buffer names when non--nil
