@@ -24,6 +24,8 @@
  show-trailing-whitespace t
  colon-double-space t
  pop-up-windows t
+ history-length 500
+ recentf-max-saved-items 500
  ;; visible-bell t
  ;; visual-bell t                          ; no beeping, just flash screen
  ring-bell-function 'ignore             ; do nothing
