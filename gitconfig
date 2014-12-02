@@ -40,3 +40,5 @@
 [user]
 	name = malcolm
 	email = me@jgmalcolm.com
+[core]
+	editor = vim
