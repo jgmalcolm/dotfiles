@@ -851,6 +851,12 @@ in 'my-shebang-patterns."
   (kill-matching-buffers-by #'(lambda (b) (or (buffer-file-name b) ""))))
 
 
+(defun sudo-find-file (file-name)
+  "Like find file, but opens the file as root."
+  (interactive "FSudo Find File: ")
+  (let ((tramp-file-name (concat "/sudo::" (expand-file-name file-name))))
+    (find-file tramp-file-name)))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
