@@ -112,22 +112,12 @@ function _jump { # completion command for jump
 complete -F _jump j
 shopt -s progcomp
 
-# tab-complete git tags/branches/etc.
-for base in /etc/bash_completion.d /opt/local/etc/bash_completion.d /usr/share/bash-completion/completions; do
-    [ -r $base/git ] || continue
-    . $base/git
-    complete -o bashdefault -o default -o nospace -F _git g # alias g=git
-    break
-done
-
 # setup git prompt if possible (set default first)
 # ${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[01;34m\] \w \$\[\033[00m\]
 export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\] \$ '
-for p in /usr/share/git /usr/share/git/completion; do # /Users/malcolm/src/others/git-prompt; do
-    [ -r $p/git-prompt.sh ] || continue
-    . $p/git-prompt.sh
-    export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\]$(__git_ps1 "{%s}") \$ '
-done
+[ -r ~/.git-prompt.sh     ] && source ~/.git-prompt.sh
+[ -r ~/.git-completion.sh ] && source ~/.git-completion.sh
+export PS1='\[\033[1G\e[33m\]\h\[\e[0m\].\[\033[32m\]\W\[\033[0m\]$(__git_ps1 "{%s}") \$ '
 
 set visual-bell none
 
