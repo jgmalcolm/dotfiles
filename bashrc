@@ -1,8 +1,7 @@
 #!/bin/sh
 # run on non-interactive logins
 
-umask 002
-#ulimit -c unlimited  # produce core files upon segfault
+umask 002  # mask off world write
 
 shopt -s checkwinsize # reassess window size between commands
 shopt -s cdspell # fix 'cd folder' spelling mistakes
@@ -23,13 +22,6 @@ alias gd='git di'
 alias gf='git f'
 alias dm='du -sm * | sort -n'
 alias gdb='gdb --quiet'
-#function _head {
-#  [ $# -ge 1 -a "${1#-}" = "$1" ] \
-#    && \head -$((${LINES:-12}-2)) $@ \
-#    || \head $@;
-#}
-#alias head=_head
-#alias tail='tail -n $((${LINES:-12}-2)) -s.1' #Likewise, also more responsive -f
 alias hd='od -Ax -tx1z -v' # hexdump
 
 function afssh {
