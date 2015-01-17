@@ -6,10 +6,6 @@ case `uname` in
     which stty &>/dev/null && stty stop ^S intr ^C
     which setterm &>/dev/null && setterm -blength 0
     ;;
-
-    SunOS)
-    (which stty | grep '^no' &>/dev/null) || stty erase 
-    (which setterm | grep '^no' &>/dev/null) || setterm -blength 0
 esac
 
 . ${HOME}/.bashrc
