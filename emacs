@@ -891,6 +891,16 @@ in 'my-shebang-patterns."
       helm-ff-file-name-history-use-recentf t
       helm-exit-idle-delay                  0)
 (helm-mode 1)
+(helm :sources '(helm-source-findutils
+                 helm-source-recentf
+                 helm-source-bookmarks
+                 helm-source-buffers-list
+                 ; helm-source-google-suggest
+                 helm-source-locate
+                 ; helm-source-ls-git
+                 )
+      :buffer "*helm all the things*")
+
 
 (add-to-list 'crypt-encryption-alist
              ;; Blowfish encryption
