@@ -30,21 +30,15 @@ alias r='stty sane'
 
 function s { local cmd="screen -ADR $(whoami)"; [[ $# == 0 ]] && $cmd || ssh -t $@ $cmd; }
 function x { local cmd="screen -Ax  $(whoami)"; [[ $# == 0 ]] && $cmd || ssh -t $@ $cmd; }
-function line   { sed "$1q;d" $2; }
-function rmline { sed -i'' -e "$1d" $2; }
+function line   { sed "$1q;d" $2; } # line <line> [file]
+function rmline { sed -i'' -e "$1d" $2; }  # rmline <line> [file]
 function buffer { (test -t 1 && less -F - || cat) } # stdin to less if terminal
 function tmpdir { pushd `mktemp -d -t tmpXXX`; }
 function mkdircd { mkdir -p $1 && cd $1; }
-function calc   { echo "$@" | bc -l; }
-function E { emacs -bg black -fg white $@; }
+function calc   { echo "$@" | bc -l; } # math with floats
 function e { emacsclient -t $@; }
-function ex { [[ $# == 0 ]] && emacsclient -c -n || ssh -Xf $@ emacsclient -c -n & exit; }
-function pdf { xpdf $@ & exit; }
-function mdb { matlab -Dgdb; }
 alias unansi='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"' # strip ansi color escape sequences
 function c { cal -3 $@; }
-function svndi { svn di $@ | colordiff | buffer; }
-alias svnst='svn st'
 function dos2unix { sed -i '' -e 's///g' $@; }
 alias gup='git up'
 function gb {
@@ -60,8 +54,6 @@ function matrix { tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=un
 export LESS="-iFmRSX" #QR
 export LESSOPEN="|lesspipe.sh %s"  # special less file hooks
 export LESSCLOSE=
-
-alias m="matlab -nodesktop -nosplash"
 
 if [[ `uname -m` == x86_64 ]]; then ARCH=64; fi
 if [[ `uname` == Darwin ]]; then
