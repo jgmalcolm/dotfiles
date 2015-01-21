@@ -9,7 +9,7 @@ set -eu
 link() { rm -rf ~/.$1; ln -vs $dir/$1 ~/.$1; }
 copy() { rm -rf ~/.$1; cp -vp $dir/$1 ~/.$1; chmod go-w ~/.$1; }
 
-# ssh,gdb hate symlinks
+# ssh/gdb reject symlinks (security reasons)
 cp -v $dir/ssh_config   ~/.ssh/config
 chmod 644 ~/.ssh/config
 copy gdbinit
