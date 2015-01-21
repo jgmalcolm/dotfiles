@@ -1,4 +1,5 @@
 #!/bin/sh
+# open files based on extension
 fn="$1"
 case "$fn" in
     *.tgz|*.tar.gz)  tar tzf "$fn" ;;
