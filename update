@@ -23,7 +23,6 @@ link emacs
 link elisp
 link eshell
 link vimrc
-#link slate
 link xpdfrc
 link input
 link gitconfig
