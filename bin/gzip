@@ -1,4 +1,5 @@
 #!/bin/sh
+# use parallel gzip (pigz) if present, otherwise fallback
 
 gz=$(which -a gzip | sed '1d') # fallback
 which pigz >/dev/null && gz=pigz
