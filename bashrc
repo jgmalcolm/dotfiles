@@ -120,7 +120,6 @@ BLOCK_SIZE='si'
 for p in \
     $HOME/.bin \
     /usr/local/matlab/bin \
-    /usr/local/cuda/bin \
     /usr/local/bin \
     /usr/local/sbin \
     /opt/local/bin \
@@ -140,7 +139,7 @@ done
 unset p
 export PATH=${PATH##:}
 
-export MANPATH=/usr/share/man:/usr/local/man:/opt/local/man:/usr/local/cuda/man:/usr/local/sge/ge2011.11/man
+export MANPATH=/usr/share/man:/usr/local/man:/opt/local/man
 export INFOPATH=/usr/local/info:/usr/share/info:/opt/local/info
 
 export SGE_EXECD_PORT=6445
