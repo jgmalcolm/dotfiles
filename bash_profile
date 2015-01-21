@@ -2,7 +2,7 @@
 # run for interactive logins
 
 case `uname` in
-    Linux)
+  Linux)
     which stty &>/dev/null && stty stop ^S intr ^C
     which setterm &>/dev/null && setterm -blength 0
     ;;
