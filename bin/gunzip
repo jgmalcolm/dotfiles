@@ -1,5 +1,5 @@
 #!/bin/sh
-
+# use parallel unzip (pigz -d) if present, otherwise fallback
 gz=$(which -a gunzip | sed '1d') # fallback
 which pigz >/dev/null && gz='pigz -d'
 exec $gz $@
