@@ -8,7 +8,5 @@ case `uname` in
     ;;
 esac
 
-. ${HOME}/.bashrc
-
 bind '"\e[A": history-search-backward'
 bind '"\e[B": history-search-forward'
