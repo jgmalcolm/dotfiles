@@ -1,0 +1,12 @@
+#!/bin/sh
+
+[ $# -eq 0 ] && { printf "usage:\t$0 LAST\n\t$0 FIRST LAST\n\t$0 FIRST INC LAST\n" 1>&2 && exit 1; }
+
+[ $# -eq 1 ] && { FIRST=1;  INC=1;  LAST=$1; }
+[ $# -eq 2 ] && { FIRST=$1; INC=1;  LAST=$2; }
+[ $# -eq 3 ] && { FIRST=$1; INC=$2; LAST=$3; }
+
+while [ $FIRST -le $LAST ]; do
+    echo $FIRST
+    let "FIRST += $INC"
+done

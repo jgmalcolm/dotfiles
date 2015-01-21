@@ -1,0 +1,4 @@
+#!/bin/sh
+reps=$1
+shift
+for T in $(seq $reps); do $*; done

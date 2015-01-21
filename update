@@ -28,3 +28,4 @@ link input
 link gitconfig
 link git-prompt.sh
 link git-completion.sh
+link bin
