@@ -1,4 +1,6 @@
 #!/bin/sh
+# repeat <command> <N> times
+# $ repeat N <command>
 reps=$1
 shift
 for T in $(seq $reps); do $*; done
