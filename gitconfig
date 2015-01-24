@@ -5,9 +5,9 @@
   st = status -sb
   ann = annotate
   b = branch
-  l = log --topo-order --graph --pretty='%h %C(red)%an%Creset %s %C(yellow)%ar %C(green)%d%Creset'
-  c = log --topo-order         --pretty='%h %C(red)%an%Creset %s %C(yellow)%ar %C(green)%d%Creset'
-  f = fetch -p # -pt --all
+#  l = log --topo-order --graph --pretty='%h %C(red)%an%Creset %s %C(yellow)%ar %C(green)%d%Creset'
+  l = log --all --graph --pretty=format:'%Cred%h%Creset %s %C(green)(%ar) %C(blue)%an%Creset%C(auto)%d%Creset' --date=relative
+  f = fetch -p --all
   up = "! git pull --rebase"
 
 [push]
