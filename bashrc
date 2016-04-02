@@ -16,10 +16,7 @@ alias lla='ls -lA'
 alias ..='cd ..'
 alias -- -='cd -'
 alias g=git
-alias gi=git
 alias gs='git st'
-alias gd='git di'
-alias gf='git f'
 alias dm='du -sm * | sort -n'
 alias gdb='gdb --quiet'
 alias hd='od -Ax -tx1z -v' # hexdump
@@ -40,7 +37,6 @@ function e { emacsclient -t $@; }
 alias unansi='sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"' # strip ansi color escape sequences
 function c { cal -3 $@; }
 function dos2unix { sed -i '' -e 's///g' $@; }
-alias gup='git up'
 function gb {
     fmt='%ci %h %C(yellow)%ar%C(reset)%C(green)%d%C(reset) %C(red)%an%Creset %s'
     for k in `git branch -av | sed 's/^..[^ ]* *\([a-f0-9]*\) .*$/\1/'| sort -u`; do
