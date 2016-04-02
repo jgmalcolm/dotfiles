@@ -127,8 +127,6 @@ for p in \
     /usr/X/bin \
     /usr/X11R6/bin \
     /usr/local/java/default/bin \
-    /usr/local/sge/ge2011.11/bin/linux-x64 \
-    /usr/local/groovy/groovy-2.0.1/bin \
     ; do
   [ -x $p ] && PATH=$PATH:$p
 done
@@ -138,11 +136,6 @@ export PATH=${PATH##:}
 export MANPATH=/usr/share/man:/usr/local/man:/opt/local/man
 export INFOPATH=/usr/local/info:/usr/share/info:/opt/local/info
 
-export SGE_EXECD_PORT=6445
-export SGE_QMASTER_PORT=7890
-export SGE_ROOT=/usr/local/sge/ge2011.11
-
-
 [ $TERM == "screen.rxvt" ] && export TERM=xterm-256color
 
 export PAGER=less
@@ -150,5 +143,3 @@ export VISUAL='emacsclient'
 export EDITOR='emacsclient'
 export ALTERNATE_EDITOR=vim
 export NETHACKOPTIONS  # for screen fun
-
-export CLASSPATH=/qdata/backTest/repo/v0.9/aiq/dist/*:/qdata/backTest/repo/v0.9/aiq/lib/*
