@@ -688,7 +688,10 @@ something to do with 'defun which I obviously don't know much about."
 (add-hook 'markdown-mode-hook 'turn-on-flyspell)
 (add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
 (defun my-markdown-mode-hook ()
-  "personal settings"
+  "Personal settings for markdown-mode."
+  (font-lock-add-keywords nil
+                          '(("\\<\\(FIXME\\|HACK\\|TODO\\|XXX+\\|BUG\\):?"
+                             1 font-lock-warning-face prepend)))
   (local-set-key "\C-c\C-j" 'flyspell-check-previous-highlighted-word))
 (autoload 'yaml-mode "yaml-mode"
    "Major mode for editing YAML files" t)
