@@ -23,6 +23,9 @@ alias dm='du -sm * | sort -n'
 alias gdb='gdb --quiet'
 alias hd='od -Ax -tx1z -v' # hexdump
 
+function m { matlab -nodesktop -nosplash; }
+function mdb { matlab -Dgdb; }
+
 export GREP_OPTIONS=--color=auto
 export GREP_COLOR="1;33;40"  # yellow on black
 alias r='stty sane'
