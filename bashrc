@@ -18,6 +18,7 @@ alias -- -='cd -'
 alias g=git
 alias gs='git st'
 alias gd='git di'
+alias gf='git f'
 alias dm='du -sm * | sort -n'
 alias gdb='gdb --quiet'
 alias hd='od -Ax -tx1z -v' # hexdump
