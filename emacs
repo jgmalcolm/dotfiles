@@ -464,6 +464,9 @@ something to do with 'defun which I obviously don't know much about."
   (local-set-key "\C-c\C-r" 'refill-mode)
   (modify-syntax-entry ?\$ "." text-mode-syntax-table)
   ;; (hl-line-mode 1)
+  (font-lock-add-keywords nil
+                          '(("\\<\\(FIXME\\|HACK\\|TODO\\|XXX+\\|BUG\\):?"
+                             1 font-lock-warning-face prepend)))
   (setq
    fill-column 78
    sentence-end-double-space t
