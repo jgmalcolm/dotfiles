@@ -42,3 +42,5 @@
 	email = me@jgmalcolm.com
 [core]
 	editor = vim
+[clean]
+	requireForce = false
