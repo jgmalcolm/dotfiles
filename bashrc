@@ -20,6 +20,7 @@ alias gs='git st'
 alias gd='git di'
 alias gf='git f'
 alias dm='du -smc * | sort -n'
+alias dk='du -skc * | sort -n'
 alias gdb='gdb --quiet'
 alias hd='od -Ax -tx1z -v' # hexdump
 
