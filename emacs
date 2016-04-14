@@ -16,6 +16,7 @@
  auto-fill-function nil
  indent-tabs-mode nil)
 (global-font-lock-mode 1)
+(global-auto-revert-mode t)
 (setenv "TERM" "xterm-256color")
 (setq
  confirm-kill-emacs 'yes-or-no-p
