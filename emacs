@@ -658,6 +658,8 @@ something to do with 'defun which I obviously don't know much about."
    matlab-fill-code nil
    matlab-fill-strings nil
    matlab-indent-function t
+   matlab-indent-level 2
+   matlab-cont-level 2
    matlab-highlight-block-match-flag t
    matlab-verify-on-save-flag nil
    matlab-handle-graphics-list nil
