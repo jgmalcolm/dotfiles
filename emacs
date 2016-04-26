@@ -250,7 +250,6 @@ something to do with 'defun which I obviously don't know much about."
                             "top"
                             "gdb"
                             "matlab"
-                            "matlab74"
                             "less"
                             "ccmake"
                             "ipython2.6")
@@ -646,6 +645,7 @@ something to do with 'defun which I obviously don't know much about."
 (add-to-list 'auto-mode-alist '("\\.php$"   . php-mode))
 
 ;; matlab-mode
+(add-to-list 'load-path (expand-file-name "~/.elisp/matlab/"))
 (autoload 'matlab-mode "matlab" "Major mode for editing MATLAB code." t)
 (add-to-list 'auto-mode-alist '("\\.m$" . matlab-mode))
 (defun my-matlab-mode ()
