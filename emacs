@@ -464,9 +464,6 @@ something to do with 'defun which I obviously don't know much about."
   (local-set-key "\C-c\C-r" 'refill-mode)
   (modify-syntax-entry ?\$ "." text-mode-syntax-table)
   ;; (hl-line-mode 1)
-  (font-lock-add-keywords nil
-                          '(("\\<\\(FIXME\\|HACK\\|TODO\\|XXX+\\|BUG\\):?"
-                             1 font-lock-warning-face prepend)))
   (setq
    fill-column 78
    sentence-end-double-space t
@@ -668,6 +665,8 @@ something to do with 'defun which I obviously don't know much about."
 (mapcar '(lambda (ext)
            (add-to-list 'completion-ignored-extensions ext))
         '(".mexmaci" ".mexmaci64" ".mexglx" ".mexa64" ".mexw32" ".mexw64"))
+(font-lock-add-keywords 'matlab-mode
+                        '("\\<\\(FIXME\\|HACK\\|TODO\\|XXX+\\|BUG\\):?"))
 
 (defun my-comint-mode ()
   "My comint setup"
@@ -695,9 +694,6 @@ something to do with 'defun which I obviously don't know much about."
 (add-hook 'markdown-mode-hook 'my-markdown-mode-hook)
 (defun my-markdown-mode-hook ()
   "Personal settings for markdown-mode."
-  (font-lock-add-keywords nil
-                          '(("\\<\\(FIXME\\|HACK\\|TODO\\|XXX+\\|BUG\\):?"
-                             1 font-lock-warning-face prepend)))
   (local-set-key "\C-c\C-j" 'flyspell-check-previous-highlighted-word))
 (autoload 'yaml-mode "yaml-mode"
    "Major mode for editing YAML files" t)
