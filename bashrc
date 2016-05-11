@@ -18,6 +18,7 @@ alias -- -='cd -'
 alias g=git
 alias gs='git st'
 alias gd='git di'
+alias gc='git di --cached'
 alias gf='git f'
 alias dm='du -smc * | sort -n'
 alias dk='du -skc * | sort -n'
