@@ -20,8 +20,10 @@ alias gs='git st'
 alias gd='git di'
 alias gc='git di --cached'
 alias gf='git f'
-alias dm='du -smc * | sort -n'
-alias dk='du -skc * | sort -n'
+function _du { [[ $# > 1 ]] && (du $@ | sort -n) || (du $@ * | sort -n); }
+alias dh='_du -shc'
+alias dm='_du -smc'
+alias dk='_du -skc'
 alias gdb='gdb --quiet'
 alias hd='od -Ax -tx1z -v' # hexdump
 
