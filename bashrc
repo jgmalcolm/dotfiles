@@ -29,6 +29,7 @@ alias hd='od -Ax -tx1z -v' # hexdump
 
 function m { matlab -nodesktop -nosplash; }
 function mdb { matlab -Dgdb; }
+function unpacked { git init; git add .; git ci -m 'unpacked'; }
 
 export GREP_OPTIONS=--color=auto
 export GREP_COLOR="1;33;40"  # yellow on black
